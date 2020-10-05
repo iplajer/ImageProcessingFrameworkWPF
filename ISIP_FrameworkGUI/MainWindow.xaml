@@ -1,0 +1,42 @@
+﻿<Window x:Class="ISIP_FrameworkGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:ISIP_UserControlLibrary;assembly=ISIP_UserControlLibrary"
+        Title="ISIP Framework 2014" Height="768" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Height="25">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+           
+            <MenuItem Header="File">
+                <MenuItem Header="Load grayscale image" Click="openGrayscaleImageMenuItem_Click"/>
+                <MenuItem Header="Load color image" Click="openColorImageMenuItem_Click"/>
+                <Separator/>
+                <MenuItem Header="Save processed image" Click="saveProcessedImageMenuItem_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Magnifyer" Name="Magnifyer_ON" Click="Magnifyer_ON_Click" IsCheckable="True" IsEnabled="False"/>
+                <MenuItem Header="GLevels_on_Row" Name="GL_ROW_ON" IsCheckable="True" Click="GL_ROW_ON_Click" IsEnabled="False"/>
+                <MenuItem Header="Invert" Click="InvertMenuItem"/>
+
+             </MenuItem>
+            <MenuItem Header="Filters">
+                             
+            </MenuItem>
+            <MenuItem Header="Save as original image" HorizontalAlignment="Right"
+                      Click="saveAsOriginalMenuItem_Click"/>
+        </Menu>
+        
+        <uc:ImageProcessingControl Grid.Row="1" Name="mainControl"/>
+        
+    </Grid>
+</Window>
