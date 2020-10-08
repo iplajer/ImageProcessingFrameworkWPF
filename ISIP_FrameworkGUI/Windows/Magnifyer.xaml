@@ -1,0 +1,9 @@
+﻿<Window x:Class="ISIP_FrameworkGUI.Windows.Magnifyer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Magnifyer" Height="300" Width="700" Topmost="True">
+    <Grid>
+        <Canvas Name="OrigMagnif" HorizontalAlignment="Left" Height="260" Margin="10,0,0,0.4" VerticalAlignment="Bottom" Width="262"/>
+        <Canvas Name="ProcMagnif" HorizontalAlignment="Left" Height="260" Margin="318,0,0,0.4" VerticalAlignment="Bottom" Width="262"/>
+    </Grid>
+</Window>
